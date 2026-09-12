@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(
+    135deg,
+    #0f172a 0%,
+    #172554 50%,
+    #312e81 100%
+  );
+}
+
+/* Main Container */
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+/* Counter Card */
+.counter-card {
+  width: 100%;
+  max-width: 440px;
+  padding: 45px 35px;
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 24px;
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.35),
+    0 0 40px rgba(99, 102, 241, 0.15);
+}
+
+/* Heading */
+.counter-card h1 {
+  margin-bottom: 30px;
+
+  font-size: 34px;
+  font-weight: 700;
+
+  color: #111827;
+  letter-spacing: -0.8px;
+}
+
+/* Counter Number */
+.count-display {
+  margin-bottom: 35px;
+
+  font-size: 76px;
+  font-weight: 800;
+
+  color: #4f46e5;
+
+  line-height: 1;
+  text-shadow: 0 5px 20px rgba(79, 70, 229, 0.2);
+}
+
+/* Buttons Container */
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Common Button Style */
+.btn {
+  border: none;
+  border-radius: 12px;
+
+  padding: 13px 22px;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+/* Hover Effect */
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Increase Button */
+.increment {
+  background: linear-gradient(
+    135deg,
+    #4f46e5,
+    #7c3aed
+  );
+
+  color: #ffffff;
+  font-size: 28px;
+
+  width: 58px;
+  height: 52px;
+
+  padding: 0;
+
+  box-shadow:
+    0 8px 20px rgba(79, 70, 229, 0.35);
+}
+
+.increment:hover {
+  background: linear-gradient(
+    135deg,
+    #4338ca,
+    #6d28d9
+  );
+
+  box-shadow:
+    0 12px 25px rgba(79, 70, 229, 0.45);
+}
+
+/* Decrease Button */
+.decrement {
+  background: linear-gradient(
+    135deg,
+    #f43f5e,
+    #e11d48
+  );
+
+  color: #ffffff;
+  font-size: 28px;
+
+  width: 58px;
+  height: 52px;
+
+  padding: 0;
+
+  box-shadow:
+    0 8px 20px rgba(244, 63, 94, 0.3);
+}
+
+.decrement:hover {
+  background: linear-gradient(
+    135deg,
+    #e11d48,
+    #be123c
+  );
+
+  box-shadow:
+    0 12px 25px rgba(244, 63, 94, 0.4);
+}
+
+/* Reset Button */
+.reset {
+  background: #f1f5f9;
+  color: #334155;
+
+  border: 1px solid #e2e8f0;
+}
+
+.reset:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+
+  box-shadow:
+    0 8px 18px rgba(15, 23, 42, 0.12);
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .counter-card {
+    padding: 35px 22px;
+  }
+
+  .counter-card h1 {
+    font-size: 28px;
+  }
+
+  .count-display {
+    font-size: 64px;
+  }
+
+  .button-group {
+    gap: 10px;
+  }
+
+  .btn {
+    padding: 12px 17px;
+  }
+
+  .increment,
+  .decrement {
+    width: 52px;
+    height: 48px;
+  }
+}
